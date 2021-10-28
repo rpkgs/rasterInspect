@@ -41,10 +41,10 @@ show_popup <- function(r, lon = NULL, lat = NULL) { # Show popup on clicks
         c(i, j) %<-% rowColFromCell(r, cell) # Get row and column, to print later
         
         val <- r[cell] %>% paste(collapse = ", ") # Get value of the given cell
-        content <- glue("i={i}, j = {j}, cell = {cell}; lon = {round(x, 5)}, lat = {round(y, 5)}, val = {val}")
+        content <- glue("i={i}, j = {j}, cell = {cell};<br> 
+            lon = {round(x, 5)}, lat = {round(y, 5)}, val = {val}")
         cell2 = (i - 1) * ncol + j
-        print(cell2)
-
+        # print(cell2)
         proxy <- leafletProxy("map")
         proxy %>%
             clearPopups() %>%

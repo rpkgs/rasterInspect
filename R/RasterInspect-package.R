@@ -1,6 +1,7 @@
 #' @import leaflet raster shinydashboard shiny zeallot
-#' @keywords internal
+#' @importFrom glue glue
 #' @importFrom grDevices terrain.colors
+#' @keywords internal
 "_PACKAGE"
 
 ## usethis namespace: start
